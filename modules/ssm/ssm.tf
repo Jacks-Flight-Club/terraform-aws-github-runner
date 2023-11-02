@@ -12,6 +12,7 @@ resource "aws_ssm_parameter" "github_app_key_base64" {
   value  = var.github_app.key_base64
   key_id = local.kms_key_arn
   tags   = var.tags
+  tier   = "Advanced"
 }
 
 resource "aws_ssm_parameter" "github_app_webhook_secret" {
